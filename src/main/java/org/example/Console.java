@@ -23,6 +23,7 @@ public class Console {
         commands.put("whoami", new WhoIAm());
         commands.put("pwd", new PrintDir());
         commands.put("cd", new ChangeDir());
+        commands.put("ls", new ViewDirs());
     }
 
     private void proved() {

@@ -19,7 +19,7 @@ public class User {
             e.printStackTrace();
         }
         this.name = "filip";
-        this.path = "/home/" + name + "/";
+        this.path = "PC/home/" + name + "/";
         this.PCname = adresa.getHostName();
     }
 

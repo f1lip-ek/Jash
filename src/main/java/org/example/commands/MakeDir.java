@@ -1,5 +1,7 @@
 package org.example.commands;
 
+import org.example.User;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -9,7 +11,7 @@ public class MakeDir extends Command{
 
     @Override
     public String execute(String input) {
-        String cesta = "PC\\filip\\" + input;
+        String cesta = User.path + input;
         Path slozkaPath = Paths.get(cesta);
         try {
             if (!Files.exists(slozkaPath)) {
