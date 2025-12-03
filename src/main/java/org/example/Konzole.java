@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.commands.*;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.util.HashMap;

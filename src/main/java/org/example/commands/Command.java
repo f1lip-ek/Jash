@@ -1,4 +1,4 @@
-package org.example;
+package org.example.commands;
 
 public abstract class Command {
 
