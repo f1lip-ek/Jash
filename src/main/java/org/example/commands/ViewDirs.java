@@ -17,7 +17,7 @@ public class ViewDirs extends Command{
 
         String vsechnySlozky = "";
         for (int i = 0; i < nazvy.length; i++) {
-            vsechnySlozky += nazvy[i];
+            vsechnySlozky += nazvy[i] + " ";
         }
         return vsechnySlozky;
     }
