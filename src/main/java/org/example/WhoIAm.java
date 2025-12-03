@@ -1,10 +1,10 @@
 package org.example;
 
-public class Help extends Command {
+public class WhoIAm extends Command{
 
     @Override
     public String execute(String vstup) {
-        return "\u001B[32mhelp, mkdir, quit, whoami\u001B[0m";
+        return vstup;
     }
 
     @Override

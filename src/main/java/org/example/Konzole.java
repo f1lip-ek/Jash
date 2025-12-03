@@ -18,6 +18,7 @@ public class Konzole {
         mapa.put("quit", new Quit());
         mapa.put("help", new Help());
         mapa.put("", new Nothing());
+        mapa.put("whoami", new WhoIAm());
     }
 
     private void proved() {
@@ -37,7 +38,7 @@ public class Konzole {
                     }
                 }else {
                     if (mapa.containsKey(pole[0])) {
-                        System.out.print(mapa.get(pole[0]).execute("") + "\n");
+                        System.out.print(mapa.get(pole[0]).execute(user.getName()) + "\n");
                         exit = mapa.get(pole[0]).exit();
                     } else {
                         throw new Exception();
