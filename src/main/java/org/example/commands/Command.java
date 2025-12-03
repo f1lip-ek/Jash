@@ -2,13 +2,13 @@ package org.example.commands;
 
 public abstract class Command {
 
-    protected String prikaz;
+    protected String command;
 
-    public void setPrikaz(String prikaz) {
-        this.prikaz = prikaz;
+    public void setCommand(String command) {
+        this.command = command;
     }
 
-    public abstract String execute(String vstup);
+    public abstract String execute(String input);
 
     public abstract boolean exit();
 }

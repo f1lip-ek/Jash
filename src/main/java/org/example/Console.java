@@ -21,6 +21,8 @@ public class Console {
         commands.put("help", new Help());
         commands.put("", new Nothing());
         commands.put("whoami", new WhoIAm());
+        commands.put("pwd", new PrintDir());
+        commands.put("cd", new ChangeDir());
     }
 
     private void proved() {
@@ -40,8 +42,17 @@ public class Console {
                     }
                 }else {
                     if (commands.containsKey(pole[0])) {
-                        System.out.print(commands.get(pole[0]).execute(user.getName()) + "\n");
-                        exit = commands.get(pole[0]).exit();
+                        if (pole[0].equals("whoami")){
+                            System.out.print(commands.get(pole[0]).execute(user.getName()) + "\n");
+                            exit = commands.get(pole[0]).exit();
+                        } else if (pole[0].equals("pwd")) {
+                            System.out.print(commands.get(pole[0]).execute(user.getPath()) + "\n");
+                            exit = commands.get(pole[0]).exit();
+                        }else {
+                            System.out.print(commands.get(pole[0]).execute("") + "\n");
+                            exit = commands.get(pole[0]).exit();
+                        }
+
                     } else {
                         throw new Exception();
                     }

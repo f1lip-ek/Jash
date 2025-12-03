@@ -3,8 +3,8 @@ package org.example.commands;
 public class WhoIAm extends Command{
 
     @Override
-    public String execute(String vstup) {
-        return vstup;
+    public String execute(String input) {
+        return input;
     }
 
     @Override

@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 public class MakeDir extends Command{
 
     @Override
-    public String execute(String nazevSlozky) {
-        String cesta = "PC\\filip\\" + nazevSlozky;
+    public String execute(String input) {
+        String cesta = "PC\\filip\\" + input;
         Path slozkaPath = Paths.get(cesta);
         try {
             if (!Files.exists(slozkaPath)) {

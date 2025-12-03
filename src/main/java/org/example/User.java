@@ -6,7 +6,7 @@ import java.net.UnknownHostException;
 public class User {
 
     private String name;
-    private String path;
+    public static String path;
     private String PCname;
     
 
@@ -19,7 +19,7 @@ public class User {
             e.printStackTrace();
         }
         this.name = "filip";
-        this.path = "~";
+        this.path = "/home/" + name + "/";
         this.PCname = adresa.getHostName();
     }
 

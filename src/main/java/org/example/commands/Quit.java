@@ -2,8 +2,8 @@ package org.example.commands;
 
 public class Quit extends Command{
     @Override
-    public String execute(String vstup) {
-        return "Program ukoncen";
+    public String execute(String input) {
+        return "";
     }
 
     @Override
