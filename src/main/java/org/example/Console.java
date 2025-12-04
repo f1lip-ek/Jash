@@ -25,6 +25,7 @@ public class Console {
         commands.put("cd", new ChangeDir());
         commands.put("ls", new ViewDirs());
         commands.put("echo", new Echo());
+        commands.put("cat", new Concatenate());
     }
 
     private void proved() {
