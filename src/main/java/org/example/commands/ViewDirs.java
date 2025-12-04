@@ -9,15 +9,15 @@ public class ViewDirs extends Command{
 
     @Override
     public String execute(String input) {
-        String[] nazvy = new File(User.path).list();
+        String[] list = new File(User.path).list();
 
-        if (nazvy == null) {
+        if (list == null) {
             return "";
         }
 
         String vsechnySlozky = "";
-        for (int i = 0; i < nazvy.length; i++) {
-            vsechnySlozky += nazvy[i] + " ";
+        for (int i = 0; i < list.length; i++) {
+            vsechnySlozky += list[i] + " ";
         }
         return vsechnySlozky;
     }

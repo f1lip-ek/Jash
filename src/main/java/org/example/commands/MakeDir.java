@@ -17,12 +17,12 @@ public class MakeDir extends Command{
             if (!Files.exists(slozkaPath)) {
                 Files.createDirectory(slozkaPath);
             } else {
-                throw new IllegalArgumentException("Slozka s timto jmenem uz existuje");
+                throw new IllegalArgumentException("Directory with this name already exists");
             }
         } catch (IOException e) {
-            System.err.println("Chyba při vytváření složky: " + e.getMessage());
+            System.err.println("Error creating folder: " + e.getMessage());
         }
-        return "Slozka vytvorena";
+        return "";
     }
 
     @Override

@@ -18,7 +18,7 @@ public class Concatenate extends Command{
                 text += line;
             }
         }catch (IOException e){
-            throw new IllegalArgumentException("Soubor neexistuje");
+            throw new IllegalArgumentException("File does not exist");
         }
 
         return text;

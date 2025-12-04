@@ -19,7 +19,7 @@ public class ChangeDir extends Command{
             if (exist(input)){
                 User.path += input + "/";
             }else {
-                return "Slozka neexistuje";
+                return "Directory does not exist";
             }
         }
         return "";
