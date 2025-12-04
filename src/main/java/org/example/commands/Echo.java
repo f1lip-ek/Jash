@@ -1,10 +1,12 @@
 package org.example.commands;
 
-public class Help extends Command {
+public class Echo extends Command{
+
 
     @Override
     public String execute(String input) {
-        return "\u001B[32mhelp, mkdir, quit, whoami, pwd, cd, ls, echo\u001B[0m";
+        input = input.replace("\"", "");
+        return input;
     }
 
     @Override

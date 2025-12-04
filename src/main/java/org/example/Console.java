@@ -24,6 +24,7 @@ public class Console {
         commands.put("pwd", new PrintDir());
         commands.put("cd", new ChangeDir());
         commands.put("ls", new ViewDirs());
+        commands.put("echo", new Echo());
     }
 
     private void proved() {
@@ -36,10 +37,16 @@ public class Console {
                 pole[0] = pole[0].trim().toLowerCase();
                 if (pole.length != 1) {
                     if (commands.containsKey(pole[0])) {
+                        if (pole.length >= 3) {
+                            pole[1] += " ";
+                            for (int i = 2; i < pole.length; i++) {
+                                pole[1] += pole[i] + " ";
+                            }
+                        }
                         System.out.print(commands.get(pole[0]).execute(pole[1]) + "\n");
                         exit = commands.get(pole[0]).exit();
                     } else {
-                        throw new Exception();
+                        throw new Exception("Spatny prikaz");
                     }
                 }else {
                     if (commands.containsKey(pole[0])) {
@@ -55,7 +62,7 @@ public class Console {
                         }
 
                     } else {
-                        throw new Exception();
+                        throw new Exception("Spatny prikaz");
                     }
                 }
             }else {
