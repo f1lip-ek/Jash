@@ -16,11 +16,11 @@ public class ViewDirs extends Command{
         }
 
         StringBuilder allThings = new StringBuilder();
-        for (int i = 0; i < file.length; i++) {
-            if (file[i].isDirectory()) {
-                allThings.append(/*RED*/"\u001B[31m").append(file[i].getName()).append("\u001B[0m ");
+        for (File f : file) {
+            if (f.isDirectory()) {
+                allThings.append(/*RED*/"\u001B[31m").append(f.getName()).append("\u001B[0m ");
             }else {
-                allThings.append(/*GREEN*/"\u001B[32m").append(file[i].getName()).append("\u001B[0m ");
+                allThings.append(/*GREEN*/"\u001B[32m").append(f.getName()).append("\u001B[0m ");
             }
         }
         return allThings.toString();
