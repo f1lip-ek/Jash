@@ -8,8 +8,8 @@ public class MakeDir extends Command{
 
     @Override
     public String execute(String input) {
-        String cesta = User.path + input;
-        if (new File(cesta).mkdir()){
+        String path = User.path + input;
+        if (new File(path).mkdir()){
             return "Directory created";
         }
         return "Cant create";
