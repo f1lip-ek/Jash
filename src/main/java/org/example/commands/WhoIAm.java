@@ -11,4 +11,9 @@ public class WhoIAm extends Command{
     public boolean exit() {
         return false;
     }
+
+    @Override
+    public boolean sudo() {
+        return false;
+    }
 }

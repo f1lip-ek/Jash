@@ -30,6 +30,11 @@ public class ChangeDir extends Command{
         return false;
     }
 
+    @Override
+    public boolean sudo() {
+        return false;
+    }
+
     public boolean exist(String input){
         boolean exist = false;
         String[] nazvy = new File(User.path).list();

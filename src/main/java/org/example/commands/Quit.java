@@ -10,4 +10,9 @@ public class Quit extends Command{
     public boolean exit() {
         return true;
     }
+
+    @Override
+    public boolean sudo() {
+        return false;
+    }
 }

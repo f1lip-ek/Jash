@@ -11,4 +11,5 @@ public abstract class Command {
     public abstract String execute(String input);
 
     public abstract boolean exit();
+    public abstract boolean sudo();
 }

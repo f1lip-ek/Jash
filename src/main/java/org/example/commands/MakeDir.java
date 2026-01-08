@@ -19,4 +19,9 @@ public class MakeDir extends Command{
     public boolean exit() {
         return false;
     }
+
+    @Override
+    public boolean sudo() {
+        return User.path.equals("PC\\home\\root");
+    }
 }
